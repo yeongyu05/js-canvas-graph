@@ -1,0 +1,462 @@
+{
+    "html": [
+        {
+            "question": "HTML은 무엇의 약어인가요?",
+            "answers": [
+                {"answer": "Hamburger Type Markup Language", "isCorrect": false, "isSelected": false},
+                {"answer": "HyperText Markup Language", "isCorrect": true, "isSelected": false},
+                {"answer": "Happy Talk Markup Language", "isCorrect": false, "isSelected": false},
+                {"answer": "Hello World Markup Language", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "HTML에서 사용하는 태그 중 글자를 굵게 만드는 태그는 무엇인가요?",
+            "answers": [
+                {"answer": "<br>", "isCorrect": false, "isSelected": false},
+                {"answer": "<i>", "isCorrect": false, "isSelected": false},
+                {"answer": "<strong>", "isCorrect": true, "isSelected": false},
+                {"answer": "<link>", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "HTML에서 사용하는 태그 중 이미지를 삽입하는 태그는 무엇인가요?",
+            "answers": [
+                {"answer": "<img>", "isCorrect": true, "isSelected": false},
+                {"answer": "<anchor>", "isCorrect": false, "isSelected": false},
+                {"answer": "<area>", "isCorrect": false, "isSelected": false},
+                {"answer": "<base>", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "HTML에서 사용하는 태그 중 제목을 표시하는 태그는 무엇인가요?",
+            "answers": [
+                {"answer": "<h1>", "isCorrect": true, "isSelected": false},
+                {"answer": "<head>", "isCorrect": false, "isSelected": false},
+                {"answer": "<header>", "isCorrect": false, "isSelected": false},
+                {"answer": "<html>", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "HTML에서 사용하는 태그 중 목록을 표시하는 태그는 무엇인가요?",
+            "answers": [
+                {"answer": "<ul>", "isCorrect": true, "isSelected": false},
+                {"answer": "<li>", "isCorrect": false, "isSelected": false},
+                {"answer": "<ol>", "isCorrect": false, "isSelected": false},
+                {"answer": "<dl>", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "HTML에서 사용하는 태그 중 하이퍼링크를 생성하는 태그는 무엇인가요?",
+            "answers": [
+                {"answer": "<img>", "isCorrect": false, "isSelected": false},
+                {"answer": "<anchor>", "isCorrect": true, "isSelected": false},
+                {"answer": "<area>", "isCorrect": false, "isSelected": false},
+                {"answer": "<base>", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "HTML에서 사용하는 태그 중 텍스트를 굵게 만들고, 중앙 정렬하며, 밑줄을 표시하는 태그는 무엇인가요?",
+            "answers": [
+                {"answer": "<strong>", "isCorrect": false, "isSelected": false},
+                {"answer": "<center>", "isCorrect": true, "isSelected": false},
+                {"answer": "<u>", "isCorrect": false, "isSelected": false},
+                {"answer": "<li>", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "HTML에서 사용하는 태그 중 입력 양식을 생성하는 태그는 무엇인가요?",
+            "answers": [
+                {"answer": "<input>", "isCorrect": true, "isSelected": false},
+                {"answer": "<form>", "isCorrect": false, "isSelected": false},
+                {"answer": "<select>", "isCorrect": false, "isSelected": false},
+                {"answer": "<option>", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "HTML에서 사용하는 태그 중 표를 생성하는 태그는 무엇인가요?",
+            "answers": [
+                {"answer": "<tr>", "isCorrect": false, "isSelected": false},
+                {"answer": "<td>", "isCorrect": false, "isSelected": false},
+                {"answer": "<th>", "isCorrect": false, "isSelected": false},
+                {"answer": "<table>", "isCorrect": true, "isSelected": false}
+            ]
+        },
+        {
+            "question": "HTML에서 사용하는 태그 중 줄바꿈을 하지 않는 공백을 삽입하는 태그는 무엇인가요?",
+            "answers": [
+                {"answer": "<br>", "isCorrect": false, "isSelected": false},
+                {"answer": "<hr>", "isCorrect": false, "isSelected": false},
+                {"answer": "<p>", "isCorrect": false, "isSelected": false},
+                {"answer": "&nbsp;", "isCorrect": true, "isSelected": false}
+            ]
+        }
+    ],
+    "css": [
+        {
+            "question": "CSS란 무엇의 약자인가요?",
+            "answers": [
+                {"answer": "Cascading Style Sheet", "isCorrect": true, "isSelected": false},
+                {"answer": "Creative Style Sheet", "isCorrect": false, "isSelected": false},
+                {"answer": "Computerized Style Sheet", "isCorrect": false, "isSelected": false},
+                {"answer": "Contemporary Style Sheet", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 선택자(selector)로 적합하지 않은 것은 무엇인가요?",
+            "answers": [
+                {"answer": "class 선택자", "isCorrect": false, "isSelected": false},
+                {"answer": "id 선택자", "isCorrect": false, "isSelected": false},
+                {"answer": "p 선택자", "isCorrect": true, "isSelected": false},
+                {"answer": "tag 선택자", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 박스 모델(box model) 속성이 아닌 것은 무엇인가요?",
+            "answers": [
+                {"answer": "margin", "isCorrect": false, "isSelected": false},
+                {"answer": "border", "isCorrect": false, "isSelected": false},
+                {"answer": "padding", "isCorrect": false, "isSelected": false},
+                {"answer": "width", "isCorrect": true, "isSelected": false}
+            ]
+        },
+        {
+            "question": "HTML 문서에서 CSS 파일을 연결하는 방법은 무엇인가요?",
+            "answers": [
+                {"answer": "`<link href=\"style.css\" rel=\"stylesheet\">`", "isCorrect": true, "isSelected": false},
+                {"answer": "`<script src=\"style.css\"></script>`", "isCorrect": false, "isSelected": false},
+                {"answer": "`<style src=\"style.css\"></style>`", "isCorrect": false, "isSelected": false},
+                {"answer": "`<css href=\"style.css\">`", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 inline 속성을 가지고 있는 태그는 무엇인가요?",
+            "answers": [
+                {"answer": "<div>", "isCorrect": false, "isSelected": false},
+                {"answer": "<span>", "isCorrect": true, "isSelected": false},
+                {"answer": "<p>", "isCorrect": false, "isSelected": false},
+                {"answer": "<h1>", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 가상 클래스(pseudo class)가 아닌 것은 무엇인가요?",
+            "answers": [
+                {"answer": ":hover", "isCorrect": false, "isSelected": false},
+                {"answer": ":visited", "isCorrect": false, "isSelected": false},
+                {"answer": ":active", "isCorrect": false, "isSelected": false},
+                {"answer": ":found", "isCorrect": true, "isSelected": false}
+            ]
+        },
+        {
+            "question": "CSS에서 이전 상태에 따라 다른 스타일을 적용할 때 사용하는 속성은 무엇인가요?",
+            "answers": [
+                {"answer": ":before", "isCorrect": false, "isSelected": false},
+                {"answer": ":after", "isCorrect": false, "isSelected": false},
+                {"answer": ":nth-child", "isCorrect": false, "isSelected": false},
+                {"answer": ":focus-within", "isCorrect": true, "isSelected": false}
+            ]
+        },
+        {
+            "question": "CSS에서 grid 레이아웃을 구성할 때 사용하는 속성은 무엇인가요?",
+            "answers": [
+                {"answer": "display", "isCorrect": false, "isSelected": false},
+                {"answer": "float", "isCorrect": false, "isSelected": false},
+                {"answer": "position", "isCorrect": false, "isSelected": false},
+                {"answer": "grid", "isCorrect": true, "isSelected": false}
+            ]
+        },
+        {
+            "question": "CSS에서 flexbox 레이아웃을 구성할 때 사용하는 속성은 무엇인가요?",
+            "answers": [
+                {"answer": "flex-direction", "isCorrect": false, "isSelected": false},
+                {"answer": "flex-wrap", "isCorrect": false, "isSelected": false},
+                {"answer": "flex-flow", "isCorrect": false, "isSelected": false},
+                {"answer": "모두 맞음", "isCorrect": true, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 미디어 쿼리(media query)를 사용하여 CSS 스타일을 조건부로 적용하는 방법은 무엇인가요?",
+            "answers": [
+                {"answer": "@media (min-width: 768px) { ... }", "isCorrect": false, "isSelected": false},
+                {"answer": "@media (max-width: 768px) { ... }", "isCorrect": false, "isSelected": false},
+                {"answer": "@media (orientation: landscape) { ... }", "isCorrect": false, "isSelected": false},
+                {"answer": "모두 맞음", "isCorrect": true, "isSelected": false}
+            ]
+        }
+    ],
+    "javascript": [
+        {
+            "question": "JavaScript에서, 'let'과 'var'의 차이점은 무엇입니까?",
+            "answers": [
+                {"answer": "let은 블록 스코프 내에서만 선언됩니다. var는 함수 스코프 내에서만 선언됩니다.", "isCorrect": true, "isSelected": false},
+                {"answer": "let은 함수 스코프 내에서만 선언됩니다. var는 블록 스코프 내에서만 선언됩니다.", "isCorrect": false, "isSelected": false},
+                {"answer": "let은 상수입니다. var는 변수입니다.", "isCorrect": false, "isSelected": false},
+                {"answer": "let과 var의 차이점은 없습니다.", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 JavaScript에서 비동기적으로 실행되는 함수는 무엇입니까?",
+            "answers": [
+                {"answer": "Array.filter()", "isCorrect": false, "isSelected": false},
+                {"answer": "Array.map()", "isCorrect": false, "isSelected": false},
+                {"answer": "setTimeout()", "isCorrect": true, "isSelected": false},
+                {"answer": "Array.reduce()", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "JavaScript에서, 논리연산자 \"or\" (||)는 다음 중 어떤 경우에 true를 반환합니까?",
+            "answers": [
+                {"answer": "양쪽 피연산자가 모두 true 인 경우", "isCorrect": false, "isSelected": false},
+                {"answer": "양쪽 피연산자가 모두 false 인 경우", "isCorrect": false, "isSelected": false},
+                {"answer": "한쪽 피연산자가 true 인 경우", "isCorrect": true, "isSelected": false},
+                {"answer": "한쪽 피연산자가 false 인 경우", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 JavaScript에서 배열을 생성하는 올바른 방법은 무엇입니까?",
+            "answers": [
+                {"answer": "var myArray = []", "isCorrect": true, "isSelected": false},
+                {"answer": "var myArray = new array()", "isCorrect": false, "isSelected": false},
+                {"answer": "var myArray = array{}", "isCorrect": false, "isSelected": false},
+                {"answer": "var myArray = createArray()", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "함수 레벨 스코프를 만드는 객체는 무엇입니까?",
+            "answers": [
+                {"answer": "let", "isCorrect": false, "isSelected": false},
+                {"answer": "var", "isCorrect": true, "isSelected": false},
+                {"answer": "const", "isCorrect": false, "isSelected": false},
+                {"answer": "function", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 코드의 출력 결과는 무엇입니까? console.log(1 + \"2\" + 3 + 4);",
+            "answers": [
+                {"answer": "10", "isCorrect": false, "isSelected": false},
+                {"answer": "1234", "isCorrect": true, "isSelected": false},
+                {"answer": "15", "isCorrect": false, "isSelected": false},
+                {"answer": "\"1 + 2 + 3 + 4\"", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "\"Closure\"는 다음 중 무엇인가요?",
+            "answers": [
+                {"answer": "함수와 이 함수가 선언된 렉시컬 환경의 조합", "isCorrect": true, "isSelected": false},
+                {"answer": "변수와 이 변수를 필요로 하는 함수의 조합", "isCorrect": false, "isSelected": false},
+                {"answer": "함수 몸체 내에서 다른 함수를 호출하는 것", "isCorrect": false, "isSelected": false},
+                {"answer": "undefined 값을 가지는 변수", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 JavaScript에서 false로 평가되는 값은 어떤 것입니까?",
+            "answers": [
+                {"answer": "0", "isCorrect": false, "isSelected": false},
+                {"answer": "\"\"", "isCorrect": false, "isSelected": false},
+                {"answer": "null", "isCorrect": false, "isSelected": false},
+                {"answer": "모두 맞음", "isCorrect": true, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 코드에서, 'await' 키워드가 무엇을 의미하는지 선택해주세요. async function myFunction() {const result = await someAsyncFunction(); console.log(result);}",
+            "answers": [
+                {"answer": "함수가 비동기적으로 실행됨을 나타냅니다", "isCorrect": false, "isSelected": false},
+                {"answer": "함수가 동기적으로 실행됨을 나타냅니다", "isCorrect": false, "isSelected": false},
+                {"answer": "Promise 객체를 반환합니다", "isCorrect": false, "isSelected": false},
+                {"answer": "someAsyncFunction()이 완료될 때까지 실행을 잠시 중단합니다", "isCorrect": true, "isSelected": false}
+            ]
+        },
+        {
+            "question": "JavaScript에서, \"typeof\" 연산자는 다음 중 어떤 유형의 값인지 확인하는 데 사용됩니까?",
+            "answers": [
+                {"answer": "문자열", "isCorrect": false, "isSelected": false},
+                {"answer": "숫자", "isCorrect": false, "isSelected": false},
+                {"answer": "함수", "isCorrect": false, "isSelected": false},
+                {"answer": "모두 맞음", "isCorrect": true, "isSelected": false}
+            ]
+        }
+    ],
+    "php": [
+        {
+            "question": "PHP의 정식 이름은 무엇인가요?",
+            "answers": [
+                {"answer": "Personal Home Page", "isCorrect": false, "isSelected": false},
+                {"answer": "PHP: Hypertext Preprocessor", "isCorrect": true, "isSelected": false},
+                {"answer": "Programmable Hypertext Processor", "isCorrect": false, "isSelected": false},
+                {"answer": "Page Hyperlink Processor", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "PHP 문법에서 변수의 시작을 나타내는 기호는 무엇인가요?",
+            "answers": [
+                {"answer": "#", "isCorrect": false, "isSelected": false},
+                {"answer": "$", "isCorrect": true, "isSelected": false},
+                {"answer": "%", "isCorrect": false, "isSelected": false},
+                {"answer": "&", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 PHP에서 논리 연산자로 사용되지 않는 것은 무엇인가요?",
+            "answers": [
+                {"answer": "and", "isCorrect": false, "isSelected": false},
+                {"answer": "or", "isCorrect": false, "isSelected": false},
+                {"answer": "not", "isCorrect": true, "isSelected": false},
+                {"answer": "xor", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 PHP에서 사용되는 반복문은 무엇인가요?",
+            "answers": [
+                {"answer": "repeat", "isCorrect": false, "isSelected": false},
+                {"answer": "do-while", "isCorrect": true, "isSelected": false},
+                {"answer": "loop", "isCorrect": false, "isSelected": false},
+                {"answer": "cycle", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "PHP에서 함수를 정의하는 키워드는 무엇인가요?",
+            "answers": [
+                {"answer": "def", "isCorrect": false, "isSelected": false},
+                {"answer": "func", "isCorrect": false, "isSelected": false},
+                {"answer": "function", "isCorrect": true, "isSelected": false},
+                {"answer": "define", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "PHP에서 배열을 생성하는 키워드는 무엇인가요?",
+            "answers": [
+                {"answer": "Array", "isCorrect": false, "isSelected": false},
+                {"answer": "array", "isCorrect": true, "isSelected": false},
+                {"answer": "[ ]", "isCorrect": false, "isSelected": false},
+                {"answer": "b와 c 모두", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 PHP에서 제공하는 전역 변수는 무엇인가요?",
+            "answers": [
+                {"answer": "$_GET", "isCorrect": true, "isSelected": false},
+                {"answer": "$_SET", "isCorrect": false, "isSelected": false},
+                {"answer": "$_PUT", "isCorrect": false, "isSelected": false},
+                {"answer": "$_POST", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "PHP에서 문자열을 결합하는 연산자는 무엇인가요?",
+            "answers": [
+                {"answer": "+", "isCorrect": false, "isSelected": false},
+                {"answer": ".", "isCorrect": true, "isSelected": false},
+                {"answer": "&", "isCorrect": false, "isSelected": false},
+                {"answer": "[]", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "PHP에서 상수를 정의하는 방법은 무엇인가요?",
+            "answers": [
+                {"answer": "define();", "isCorrect": false, "isSelected": false},
+                {"answer": "const();", "isCorrect": false, "isSelected": false},
+                {"answer": "constant();", "isCorrect": false, "isSelected": false},
+                {"answer": "정답은 a와 b 모두", "isCorrect": true, "isSelected": false}
+            ]
+        },
+        {
+            "question": "PHP에서 if문의 조건 안에 들어오지 않았을 경우 실행되는 블록을 나타내는 키워드는 무엇인가요?",
+            "answers": [
+                {"answer": "elseif", "isCorrect": false, "isSelected": false},
+                {"answer": "else", "isCorrect": true, "isSelected": false},
+                {"answer": "if_else", "isCorrect": false, "isSelected": false},
+                {"answer": "아무것도 쓰지 않음", "isCorrect": false, "isSelected": false}
+            ]
+        }
+    ],
+    "mysql": [
+        {
+            "question": "MySQL의 기본 포트 번호는 무엇인가요?",
+            "answers": [
+                {"answer": "3303", "isCorrect": false, "isSelected": false},
+                {"answer": "3306", "isCorrect": true, "isSelected": false},
+                {"answer": "8080", "isCorrect": false, "isSelected": false},
+                {"answer": "8000", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 MySQL 데이터베이스를 생성하는 SQL 문은 무엇인가요?",
+            "answers": [
+                {"answer": "CREATE TABLE myDatabase;", "isCorrect": false, "isSelected": false},
+                {"answer": "CREATE DATABASE myDatabase;", "isCorrect": true, "isSelected": false},
+                {"answer": "INSERT DATABASE myDatabase;", "isCorrect": false, "isSelected": false},
+                {"answer": "SELECT DATABASE myDatabase;", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "MySQL은 몇 가지 스토리지 엔진을 지원하나요?",
+            "answers": [
+                {"answer": "2", "isCorrect": false, "isSelected": false},
+                {"answer": "4", "isCorrect": false, "isSelected": false},
+                {"answer": "3", "isCorrect": false, "isSelected": false},
+                {"answer": "5", "isCorrect": true, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 MySQL에서 제공하는 트랜잭션을 지원하는 스토리지 엔진은 무엇인가요?",
+            "answers": [
+                {"answer": "MyISAM", "isCorrect": false, "isSelected": false},
+                {"answer": "InnoDB", "isCorrect": true, "isSelected": false},
+                {"answer": "Memory", "isCorrect": false, "isSelected": false},
+                {"answer": "CSV", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음의 SQL 문장 중 데이터를 조회하는 명령어는 무엇인가요?",
+            "answers": [
+                {"answer": "DROP", "isCorrect": false, "isSelected": false},
+                {"answer": "SELECT", "isCorrect": true, "isSelected": false},
+                {"answer": "INSERT", "isCorrect": false, "isSelected": false},
+                {"answer": "UPDATE", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "MySQL의 다음 기본 자료형 중 문자열 타입은 무엇인가요?",
+            "answers": [
+                {"answer": "VARCHAR", "isCorrect": true, "isSelected": false},
+                {"answer": "INT", "isCorrect": false, "isSelected": false},
+                {"answer": "DATE", "isCorrect": false, "isSelected": false},
+                {"answer": "FLOAT", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "MySQL 테이블에서 레코드를 삭제하는 SQL 명령어는 무엇인가요?",
+            "answers": [
+                {"answer": "REMOVE", "isCorrect": false, "isSelected": false},
+                {"answer": "DROP", "isCorrect": false, "isSelected": false},
+                {"answer": "TRUNCATE", "isCorrect": false, "isSelected": false},
+                {"answer": "DELETE", "isCorrect": true, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 MySQL에서 사용되는 대소문자 구분 여부에 영향을 주는 시스템 변수는 무엇인가요?",
+            "answers": [
+                {"answer": "lower_case_table_names", "isCorrect": true, "isSelected": false},
+                {"answer": "case_sensitive_mode", "isCorrect": false, "isSelected": false},
+                {"answer": "case_insensitive_option", "isCorrect": false, "isSelected": false},
+                {"answer": "character_case_option", "isCorrect": false, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 MySQL의 다중 사용자 환경에서 동시성을 제어하는 기술은 무엇인가요?",
+            "answers": [
+                {"answer": "트랜잭션", "isCorrect": false, "isSelected": false},
+                {"answer": "암호화", "isCorrect": false, "isSelected": false},
+                {"answer": "인덱싱", "isCorrect": false, "isSelected": false},
+                {"answer": "락", "isCorrect": true, "isSelected": false}
+            ]
+        },
+        {
+            "question": "다음 중 MySQL에서 자주 사용되는 인덱스의 유형은 무엇인가요?",
+            "answers": [
+                {"answer": "일반 인덱스", "isCorrect": true, "isSelected": false},
+                {"answer": "고유 인덱스", "isCorrect": false, "isSelected": false},
+                {"answer": "전체 텍스트 인덱스", "isCorrect": false, "isSelected": false},
+                {"answer": "스페이셜 인덱스", "isCorrect": false, "isSelected": false}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    font-family: sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.none {
+    display: none !important;
+}
+
+.inner {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+#root > header > .inner > h1 {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+#root > main > .questions > .inner > .title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#root > main > .questions > .inner > .container > .item {
+    margin: 5rem 0;
+}
+
+#root > main > .questions > .inner > .container > .item > .question {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#root > main > .questions > .inner > .container > .item > .answers > .answer {
+    width: calc(100% / 4);
+    padding: 2.5rem 0;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 1px 2px 3px;
+}
+
+#root > main > .questions > .inner > .container > .item > .answers > .selected {
+    background: #666;
+    color: #fff;
+}
+
+#root > main > .questions > .inner > .btns {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+#root > main > .questions > .inner > .btns > button {
+    padding: .5rem 1.5rem;
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+
+#root > main > section > .graph {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#root > main > section > .graph > article {
+    display: flex;
+    justify-content: center;
+}
+
+#root > footer {
+    background: #ccc;
+}
+#root > footer > .inner > .copy {
+    text-align: center;
+    padding: 5rem 0;
+}

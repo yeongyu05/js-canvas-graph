@@ -1,296 +1,107 @@
-const questions = {
-    'html': [
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-    ],
-    'css': [
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-    ],
-    'js': [
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-    ],
-    'php': [
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-    ],
-    'mysql': [
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-        {
-            question: 'question1',
-            answers: [
-                {answer: 'answer1', isCorrect: true},
-                {answer: 'answer2', isCorrect: false},
-                {answer: 'answer3', isCorrect: false},
-                {answer: 'answer4', isCorrect: false},
-            ]
-        },
-    ],
+const questions = await fetch('js/questions.json').then(res => res.json());
+const nextBtn = document.querySelector('.nextBtn');
+const doneBtn = document.querySelector('.doneBtn');
+const graph = document.querySelector('.graph');
+const score = 20;
+let state = 'html';
+let data = [];
+const getMaxValue = () => {
+    let maxValue = -Infinity;
+    for (const {value} of data) {
+        value > maxValue ? maxValue = value : maxValue;
+    }
+    return maxValue;
 }
-
-const data = [
-    {label: 'Category 1', value: 20, color: '#f00'},
-    {label: 'Category 2', value: 10, color: '#f80'},
-    {label: 'Category 3', value: 40, color: '#ff0'},
-    {label: 'Category 4', value: 30, color: '#0f0'},
-    {label: 'Category 5', value: 50, color: '#00f'},
-];
-
-const state = 'html';
-
+const getRandomColor = () => {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for(let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+const getTotalScore = () => {
+    const data = questions[state];
+    let totalScore = 0;
+    data.forEach(({_, answers}) => {
+        answers.forEach(({_, isCorrect, isSelected}) => {
+            totalScore = isCorrect && isSelected ? totalScore + 1 : totalScore;
+        });
+    });
+    return totalScore;
+}
+const setData = (param = {}) => {
+    data = [...data, param];
+    renderQuestions();
+}
+const setState = () => {
+    const data = Object.entries(questions);
+    let nextState = '';
+    data.forEach(([key, value], index) => {
+        const [k, v] = data[index + 1] ?? data[index];
+        if(state === key) {
+            nextState = k;
+            return;
+        };
+    });
+    state = nextState;
+}
+const setBtn = () => {
+    const data = Object.entries(questions);
+    const [k, v] = data[data.length - 1];
+    if(k !== state) return;
+    nextBtn.classList.add('none');
+    doneBtn.classList.remove('none');
+}
 const renderQuestions = () => {
+    const title = document.querySelector('.title');
     const container = document.querySelector('.container');
     const data = questions[state];
+    title.textContent = state;
+    container.innerHTML = '';
     data.forEach(({question, answers}) => {
         const item = document.createElement('div');
         const q = document.createElement('div');
         const as = document.createElement('div');
         item.className = 'item';
         q.className = 'question';
-        as.className = 'answers';
-        answers.forEach((answer, isCorrect) => {
+        as.className = 'answers flex';
+        q.textContent = question;
+        answers.forEach(ele => {
+            const {answer, isCorrect, isSelected} = ele;
             const a = document.createElement('div');
             a.className = 'answer';
             a.textContent = answer;
+            as.appendChild(a);
+            a.addEventListener('click', () => {
+                const allAnswerArr =[...as.querySelectorAll('.answer')];
+                allAnswerArr.forEach(e => e.classList.remove('selected'));
+                a.classList.add('selected');
+                answers.forEach(e => e.isSelected = false);
+                ele.isSelected = true;
+            });
         });
+        item.append(q, as);
+        container.appendChild(item);
     });
 }
-
 const renderBarGraph = (canvasId, data) => {
-    // canvas Setting
     const canvas = document.getElementById(canvasId);
     const ctx = canvas.getContext('2d');
-    const canvasWidth = 1080;
-    const canvasHeight = 720;
+    const canvasWidth = 720;
+    const canvasHeight = 405;
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
     
-    const getMaxValue = () => {
-        let maxValue = -Infinity;
-        for (const {value} of data) {
-            value > maxValue ? maxValue = value : maxValue;
-        }
-        return maxValue;
-    }
-    
-    // draw rows
-    const [pt, pb, pl, pr] = [50, 50, 50, 50];
-    const maxValue = getMaxValue(); // test;
+    const [pt, pb, pl, pr] = [25, 25, 25, 25];
+    const maxValue = getMaxValue();
     const maxHeight = canvasHeight - pt - pb;
     const rowGap = 10;
     const rowCount = maxValue / rowGap;
     const rowLimit = maxHeight / rowCount;
 
     for(let i = 0; i <= rowCount; i++) {
-        const y = canvasHeight - pb - i * rowLimit 
+        const y = canvasHeight - pb - i * rowLimit;
         ctx.beginPath();
         ctx.moveTo(pl, y);
         ctx.lineTo(canvasWidth - pr, y);
@@ -301,8 +112,7 @@ const renderBarGraph = (canvasId, data) => {
     }
 
 
-    // draw bars
-    const barWidth = 100;
+    const barWidth = 50;
     data.forEach(({value}, idx) => {
         const x = barWidth * idx + barWidth * idx;
         const y = maxHeight - maxHeight / maxValue * value;
@@ -311,26 +121,15 @@ const renderBarGraph = (canvasId, data) => {
         ctx.fillRect(x + barWidth, y + pb, width, height);
     });
 }
-
 const renderLineGraph = (canvasId, data) => {
-    // canvas Setting
     const canvas = document.getElementById(canvasId);
     const ctx = canvas.getContext('2d');
-    const canvasWidth = 1080;
-    const canvasHeight = 720;
+    const canvasWidth = 720;
+    const canvasHeight = 405;
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
-
-    const getMaxValue = () => {
-        let maxValue = -Infinity;
-        for (const {value} of data) {
-            value > maxValue ? maxValue = value : maxValue;
-        }
-        return maxValue;
-    }
     
-    // draw rows
-    const [pt, pb, pl, pr] = [50, 50, 50, 50];
+    const [pt, pb, pl, pr] = [25, 25, 25, 25];
     const maxValue = getMaxValue();
     const maxHeight = canvasHeight - pt - pb;
     const rowGap = 10;
@@ -347,7 +146,6 @@ const renderLineGraph = (canvasId, data) => {
         ctx.fillText(rowGap * i, pl, y);
     }
 
-    // draw line
     const maxWidth = canvasWidth - pl - pr;
     data.forEach(({value}, idx) => {
         const gap = maxWidth / data.length;
@@ -357,7 +155,6 @@ const renderLineGraph = (canvasId, data) => {
         ctx.stroke();
     });
 
-    // draw circle
     data.forEach(({value}, idx) => {
         const gap = maxWidth / data.length;
         const x = canvasWidth - maxWidth + pl + gap * idx;
@@ -370,31 +167,20 @@ const renderLineGraph = (canvasId, data) => {
         ctx.fill();
     })
 }
-
 const renderPolygonGraph = (canvasId, data) => {
-    // canvas Setting
     const canvas = document.getElementById(canvasId);
     const ctx = canvas.getContext('2d');
-    const canvasWidth = 1080;
-    const canvasHeight = 720;
+    const canvasWidth = 720;
+    const canvasHeight = 405;
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
 
-    const getMaxValue = () => {
-        let maxValue = -Infinity;
-        for (const {value} of data) {
-            value > maxValue ? maxValue = value : maxValue;
-        }
-        return maxValue;
-    }
-
-    // draw pentagon
     const numberOfSides = data.length;
-    const maxSize = 350;
+    const maxSize = 200;
     const Xcenter = canvasWidth / 2;
     const Ycenter = canvasHeight / 2;
-    const step = Math.PI * 2 / numberOfSides; // pre calculate step value
-    const shift = (Math.PI / 180.0) * 270; // Quick fix;
+    const step = Math.PI * 2 / numberOfSides;
+    const shift = (Math.PI / 180.0) * 270;
     const maxValue = Math.ceil(getMaxValue() / 10) * 10;
     const gapCount = maxValue / 10;
 
@@ -405,20 +191,19 @@ const renderPolygonGraph = (canvasId, data) => {
             let curStep = i * step + shift;
             const x = Xcenter + size * Math.cos(curStep);
             const y = Ycenter + size * Math.sin(curStep);
-            // i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
             ctx.lineTo(x, y);
         }
         const Xtext = Xcenter + size * Math.cos(numberOfSides * step + shift);
         const Ytext = Ycenter + size * Math.sin(numberOfSides * step + shift);
-        ctx.font = '16px sans-serif';
-        ctx.fillText(gap * 10, Xtext + 10, Ytext + 50);
+        ctx.font = '12px sans-serif';
+        ctx.fillText(gap * 5, Xtext + 5, Ytext + 25);
     }
     ctx.stroke();
 
     ctx.beginPath();
     data.forEach(({value}, idx) => {
         const size = maxSize / maxValue * value;
-        let curStep = (idx+1) * step + shift;
+        let curStep = (idx + 1) * step + shift;
         const x = Xcenter + size * Math.cos(curStep);
         const y = Ycenter + size * Math.sin(curStep);
         ctx.lineTo(x, y);
@@ -426,25 +211,20 @@ const renderPolygonGraph = (canvasId, data) => {
     ctx.fillStyle = 'rgba(0, 0, 0, .5)';
     ctx.fill();
 }
-
 const renderPieGraph = (canvasId, data) => {
-    // canvas Setting
     const canvas = document.getElementById(canvasId);
     const ctx = canvas.getContext('2d');
-    const canvasWidth = 1080;
-    const canvasHeight = 720;
+    const canvasWidth = 720;
+    const canvasHeight = 405;
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
 
     const centerX = canvasWidth / 2;
     const centerY = canvasHeight / 2;
     const radius = Math.min(centerX, centerY) - 10;
+    const total = data.reduce((sum, point) => sum + point.value, 0);
     let startAngle = 0;
 
-    // Calculate the total value of all data points
-    const total = data.reduce((sum, point) => sum + point.value, 0);
-
-    // Draw each segment of the pie
     data.forEach(point => {
         const sliceAngle = (2 * Math.PI * point.value) / total;
 
@@ -455,22 +235,44 @@ const renderPieGraph = (canvasId, data) => {
         ctx.closePath();
         ctx.fill();
 
-        // draw the lable
         const labelX = centerX + (radius / 2) * Math.cos(startAngle + sliceAngle / 2);
         const labelY = centerY + (radius / 2) * Math.sin(startAngle + sliceAngle / 2);
         ctx.fillStyle = '#000';
         ctx.font = '12px Arial';
-        ctx.fillText(point.label, labelX - 25, labelY);
+        ctx.fillText(point.label, labelX - 20, labelY);
 
         startAngle += sliceAngle;
     });
 }
-
 const render = () => {
     renderBarGraph('bar', data);
     renderLineGraph('line', data);
     renderPolygonGraph('polygon', data);
     renderPieGraph('pie', data);
 }
-
-render();
+const onBtnClick = () => {
+    const totalScore = getTotalScore();
+    const qCnt = questions[state].length;
+    const label = state;
+    const value = totalScore * 100 / qCnt;
+    const color = getRandomColor();
+    const arg = {label, value, color};
+    setState();
+    setBtn();
+    setData(arg);
+}
+const handleDoneBtnClick = () => {
+    graph.classList.remove('none');
+    onBtnClick();
+    render();
+}
+const evt = () => {
+    nextBtn.addEventListener('click', onBtnClick);
+    doneBtn.addEventListener('click', handleDoneBtnClick);
+}
+const init = () => {
+    evt();
+    renderQuestions();
+    render();
+}
+init();
