@@ -4,7 +4,11 @@ const doneBtn = document.querySelector('.doneBtn');
 const graph = document.querySelector('.graph');
 const score = 20;
 let state = 'html';
-let data = [];
+let data = [
+    {label: 'category1', value: 50, color: '#f00'},
+    {label: 'category2', value: 100, color: '#0f0'},
+    {label: 'category3', value: 75, color: '#00f'},
+];
 const getMaxValue = () => {
     let maxValue = -Infinity;
     for (const {value} of data) {
@@ -112,13 +116,18 @@ const renderBarGraph = (canvasId, data) => {
     }
 
 
-    const barWidth = 50;
-    data.forEach(({value}, idx) => {
-        const x = barWidth * idx + barWidth * idx;
+    const length = data.length;
+    const barWidth = 100;
+    const px = 50;
+    const maxWidth = canvasWidth - pl - pr - px * 2;
+    const gap = (maxWidth - barWidth * length) / (length - 1);
+    data.forEach(({label, value, color}, idx) => {
+        const x = pl + px + (barWidth * idx) + (gap * idx);
         const y = maxHeight - maxHeight / maxValue * value;
         const width = barWidth;
         const height = maxHeight / maxValue * value;
-        ctx.fillRect(x + barWidth, y + pb, width, height);
+        ctx.fillStyle = color;
+        ctx.fillRect(x, y + pb, width, height);
     });
 }
 const renderLineGraph = (canvasId, data) => {
@@ -146,22 +155,25 @@ const renderLineGraph = (canvasId, data) => {
         ctx.fillText(rowGap * i, pl, y);
     }
 
-    const maxWidth = canvasWidth - pl - pr;
-    data.forEach(({value}, idx) => {
-        const gap = maxWidth / data.length;
+    const length = data.length;
+    const px = 50;
+    const maxWidth = canvasWidth - pl - pr - px * 2;
+    const gap = maxWidth / length - 1;
+    data.forEach(({label, value, color}, idx) => {
         const x = canvasWidth - maxWidth + pl + gap * idx;
         const y = maxHeight - maxHeight / maxValue * value + pb;
         idx ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
         ctx.stroke();
     });
 
-    data.forEach(({value}, idx) => {
+    data.forEach(({label, value, color}, idx) => {
         const gap = maxWidth / data.length;
         const x = canvasWidth - maxWidth + pl + gap * idx;
         const y = maxHeight - maxHeight / maxValue * value + pb;
         const radius = 5;
         const startAngle = 0;
         const endAngle = Math.PI * 2;
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.arc(x, y, radius, startAngle, endAngle);
         ctx.fill();
@@ -196,19 +208,20 @@ const renderPolygonGraph = (canvasId, data) => {
         const Xtext = Xcenter + size * Math.cos(numberOfSides * step + shift);
         const Ytext = Ycenter + size * Math.sin(numberOfSides * step + shift);
         ctx.font = '12px sans-serif';
-        ctx.fillText(gap * 5, Xtext + 5, Ytext + 25);
+        ctx.fillText(gap * 10, Xtext + 5, Ytext + 25);
     }
     ctx.stroke();
 
     ctx.beginPath();
-    data.forEach(({value}, idx) => {
+    data.forEach(({label, value, color}, idx) => {
         const size = maxSize / maxValue * value;
         let curStep = (idx + 1) * step + shift;
         const x = Xcenter + size * Math.cos(curStep);
         const y = Ycenter + size * Math.sin(curStep);
+        ctx.fillStyle = color;
+        ctx.globalAlpha = 0.5;
         ctx.lineTo(x, y);
     });
-    ctx.fillStyle = 'rgba(0, 0, 0, .5)';
     ctx.fill();
 }
 const renderPieGraph = (canvasId, data) => {

@@ -10,9 +10,9 @@
     display: flex;
 }
 
-.none {
+/* .none {
     display: none !important;
-}
+} */
 
 .inner {
     width: 1440px;
