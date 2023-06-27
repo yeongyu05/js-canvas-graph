@@ -1,9 +1,15 @@
 const questions = await fetch('js/questions.json').then(res => res.json());
+const container = document.querySelector('.container');
 const nextBtn = document.querySelector('.nextBtn');
 const doneBtn = document.querySelector('.doneBtn');
+const resetBtn = document.querySelector('.resetBtn');
 const graph = document.querySelector('.graph');
 let state = 'html';
-let data = [];
+let data = [
+    // {label: 'category1', value: 50, color: '#f00'},
+    // {label: 'category2', value: 100, color: '#0f0'},
+    // {label: 'category3', value: 75, color: '#00f'},
+];
 const getMaxValue = () => {
     let maxValue = -Infinity;
     for (const {value} of data) {
@@ -54,23 +60,22 @@ const setBtn = () => {
 }
 const renderQuestions = () => {
     const title = document.querySelector('.title');
-    const container = document.querySelector('.container');
     const data = questions[state];
     title.textContent = state;
     container.innerHTML = '';
-    data.forEach(({question, answers}) => {
+    data.forEach(({question, answers}, index) => {
         const item = document.createElement('div');
         const q = document.createElement('div');
         const as = document.createElement('div');
         item.className = 'item';
         q.className = 'question';
-        as.className = 'answers flex';
-        q.textContent = question;
-        answers.forEach(ele => {
+        as.className = 'answers';
+        q.textContent = `${index + 1}. ${question}`;
+        answers.forEach((ele, idx) => {
             const {answer, isCorrect, isSelected} = ele;
             const a = document.createElement('div');
             a.className = 'answer';
-            a.textContent = answer;
+            a.textContent = `${idx + 1}. ${answer}`;
             as.appendChild(a);
             a.addEventListener('click', () => {
                 const allAnswerArr =[...as.querySelectorAll('.answer')];
@@ -92,7 +97,7 @@ const renderBarGraph = (canvasId, data) => {
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
     
-    const [pt, pb, pl, pr] = [25, 25, 25, 25];
+    const [pt, pb, pl, pr] = [25, 25, 50, 25];
     const maxValue = getMaxValue();
     const maxHeight = canvasHeight - pt - pb;
     const rowGap = 10;
@@ -107,14 +112,15 @@ const renderBarGraph = (canvasId, data) => {
         ctx.stroke();
 
         ctx.font = '16px sans-serif';
-        ctx.fillText(rowGap * i, pl, y);
+        ctx.textAlign = 'center';
+        ctx.fillText(rowGap * i, pl - 25, y + 5);
     }
 
 
     const length = data.length;
-    const barWidth = 100;
     const px = 50;
     const maxWidth = canvasWidth - pl - pr - px * 2;
+    const barWidth = maxWidth / length - 25;
     const gap = (maxWidth - barWidth * length) / (length - 1);
     data.forEach(({label, value, color}, idx) => {
         const x = pl + px + (barWidth * idx) + (gap * idx);
@@ -123,6 +129,8 @@ const renderBarGraph = (canvasId, data) => {
         const height = maxHeight / maxValue * value;
         ctx.fillStyle = color;
         ctx.fillRect(x, y + pb, width, height);
+        ctx.textAlign = 'center';
+        ctx.fillText(label, x + width / 2, canvasHeight - 5);
     });
 }
 const renderLineGraph = (canvasId, data) => {
@@ -172,6 +180,8 @@ const renderLineGraph = (canvasId, data) => {
         ctx.beginPath();
         ctx.arc(x, y, radius, startAngle, endAngle);
         ctx.fill();
+        ctx.textAlign = 'center';
+        ctx.fillText(label, x, y + 20);
     })
 }
 const renderPolygonGraph = (canvasId, data) => {
@@ -183,7 +193,7 @@ const renderPolygonGraph = (canvasId, data) => {
     canvas.height = canvasHeight;
 
     const numberOfSides = data.length;
-    const maxSize = 200;
+    const maxSize = 175;
     const Xcenter = canvasWidth / 2;
     const Ycenter = canvasHeight / 2;
     const step = Math.PI * 2 / numberOfSides;
@@ -209,14 +219,29 @@ const renderPolygonGraph = (canvasId, data) => {
 
     ctx.beginPath();
     data.forEach(({label, value, color}, idx) => {
+        let curStep = idx * step + shift;
+        const x = Xcenter + maxSize * Math.cos(curStep);
+        const y = Ycenter + maxSize * Math.sin(curStep);
+        ctx.textAlign = 'center';
+        ctx.font = '16px sans-serif';
+        ctx.fillStyle = color;
+        ctx.fillText(label, x, y);
+    });
+
+    ctx.beginPath();
+    data.forEach(({label, value, color}, idx) => {
         const size = maxSize / maxValue * value;
-        let curStep = (idx + 1) * step + shift;
+        let curStep = idx * step + shift;
         const x = Xcenter + size * Math.cos(curStep);
         const y = Ycenter + size * Math.sin(curStep);
-        ctx.fillStyle = color;
-        ctx.globalAlpha = 0.5;
         ctx.lineTo(x, y);
+        ctx.textAlign = 'center';
+        ctx.font = '16px sans-serif';
+        ctx.fillStyle = color;
+        ctx.fillText(value, x, y);
     });
+    ctx.fillStyle = '#000';
+    ctx.globalAlpha = 0.5;
     ctx.fill();
 }
 const renderPieGraph = (canvasId, data) => {
@@ -246,7 +271,7 @@ const renderPieGraph = (canvasId, data) => {
         const labelX = centerX + (radius / 2) * Math.cos(startAngle + sliceAngle / 2);
         const labelY = centerY + (radius / 2) * Math.sin(startAngle + sliceAngle / 2);
         ctx.fillStyle = '#000';
-        ctx.font = '12px Arial';
+        ctx.font = '16px sans-serif';
         ctx.fillText(point.label, labelX - 20, labelY);
 
         startAngle += sliceAngle;
@@ -265,12 +290,22 @@ const onBtnClick = () => {
     const value = totalScore * 100 / qCnt;
     const color = getRandomColor();
     const arg = {label, value, color};
+    window.scrollTo({top: 0, behavior: "smooth"});
     setState();
     setBtn();
     setData(arg);
 }
 const handleDoneBtnClick = () => {
+    const data = Object.entries(questions);
+    const [k, v] = data[data.length - 1];
+    if(k !== state) return;
+    nextBtn.classList.add('none');
+    doneBtn.classList.add('none');
+    resetBtn.classList.remove('none');
+
     graph.classList.remove('none');
+    container.classList.add('none');
+    window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
     onBtnClick();
     render();
 }
