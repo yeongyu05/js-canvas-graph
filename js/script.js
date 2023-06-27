@@ -2,13 +2,8 @@ const questions = await fetch('js/questions.json').then(res => res.json());
 const nextBtn = document.querySelector('.nextBtn');
 const doneBtn = document.querySelector('.doneBtn');
 const graph = document.querySelector('.graph');
-const score = 20;
 let state = 'html';
-let data = [
-    {label: 'category1', value: 50, color: '#f00'},
-    {label: 'category2', value: 100, color: '#0f0'},
-    {label: 'category3', value: 75, color: '#00f'},
-];
+let data = [];
 const getMaxValue = () => {
     let maxValue = -Infinity;
     for (const {value} of data) {
