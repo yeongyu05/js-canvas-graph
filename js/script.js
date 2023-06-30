@@ -6,9 +6,9 @@ const resetBtn = document.querySelector('.resetBtn');
 const graph = document.querySelector('.graph');
 let state = 'html';
 let data = [
-    // {label: 'category1', value: 50, color: '#f00'},
-    // {label: 'category2', value: 100, color: '#0f0'},
-    // {label: 'category3', value: 75, color: '#00f'},
+    {label: 'category1', value: 50, color: '#f00'},
+    {label: 'category2', value: 100, color: '#0f0'},
+    {label: 'category3', value: 75, color: '#00f'},
 ];
 const getMaxValue = () => {
     let maxValue = -Infinity;
@@ -260,11 +260,10 @@ const renderPieGraph = (canvasId, data) => {
 
     data.forEach(point => {
         const sliceAngle = (2 * Math.PI * point.value) / total;
-
         ctx.beginPath();
         ctx.fillStyle = point.color;
         ctx.moveTo(centerX, centerY);
-        ctx.arc(centerX, centerY, radius, startAngle, startAngle + sliceAngle);
+        ctx.arc(centerX, centerY, radius, startAngle, startAngle + sliceAngle, false);
         ctx.closePath();
         ctx.fill();
 
@@ -277,11 +276,53 @@ const renderPieGraph = (canvasId, data) => {
         startAngle += sliceAngle;
     });
 }
+const renderPolarAreaGraph = (canvasId, data) => {
+    const canvas = document.getElementById(canvasId);
+    const ctx = canvas.getContext('2d');
+    const canvasWidth = 720;
+    const canvasHeight = 405;
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
+    const centerX = canvasWidth / 2;
+    const centerY = canvasHeight / 2;
+    const radius = Math.min(centerX, centerY) - 10;
+    const total = data.reduce((sum, {value}) => sum + value, 0);
+    let startAngle = (Math.PI / 180.0) * 270;
+
+    data.forEach(point => {
+        const {label, value, color} = point;
+        const sliceAngle = (2 * Math.PI * (total / data.length)) / total;
+        const polarArea = (radius / 2) / value * 100
+        ctx.beginPath();
+        ctx.fillStyle = color;
+        ctx.globalAlpha = 0.5;
+        ctx.moveTo(centerX, centerY);
+        ctx.arc(centerX, centerY, polarArea, startAngle, startAngle + sliceAngle, false);
+        ctx.closePath();
+        ctx.fill();
+
+        const labelX = centerX + (radius / 2) * Math.cos(startAngle + sliceAngle / 2);
+        const labelY = centerY + (radius / 2) * Math.sin(startAngle + sliceAngle / 2);
+        ctx.fillStyle = '#000';
+        ctx.font = '16px sans-serif';
+        ctx.globalAlpha = 1;
+        ctx.fillText(label, labelX - 20, labelY);
+
+        startAngle += sliceAngle;
+    });
+
+    const maxValue = Math.ceil(getMaxValue() / 10) * 10;
+    const gapCount = maxValue / 10;
+    for(let gap = 1; gap <= gapCount; gap++) {
+        console.log(gap);
+    }
+}
 const render = () => {
     renderBarGraph('bar', data);
     renderLineGraph('line', data);
     renderPolygonGraph('polygon', data);
     renderPieGraph('pie', data);
+    renderPolarAreaGraph('polarArea', data);
 }
 const onBtnClick = () => {
     const totalScore = getTotalScore();

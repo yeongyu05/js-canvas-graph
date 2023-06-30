@@ -14,7 +14,7 @@
             </div>
         </header>
         <main>
-            <section class="questions">
+            <section class="questions none"> <!-- none -->
                 <div class="inner">
                     <h3 class="title">category name</h3>
                     <div class="container grid"></div>
@@ -26,7 +26,7 @@
                 </div>
             </section>
             <section>
-                <div class="inner graph none">
+                <div class="inner graph"> <!-- none -->
                     <article class="barGraph">
                         <canvas id="bar"></canvas>
                     </article>
@@ -39,6 +39,9 @@
                     <article class="pieGraph">
                         <canvas id="pie"></canvas>
                     </article>
+                    <article class="polarAreaGraph">
+                        <canvas id="polarArea"></canvas>
+                    </article>
                 </div>
             </section>
         </main>
@@ -50,7 +53,6 @@
             </div>
         </footer>
     </div>
-    <script src="js/questions.js"></script>
     <script src="js/script.js" type="module"></script>
 </body>
 </html>
