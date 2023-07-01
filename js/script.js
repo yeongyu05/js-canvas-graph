@@ -5,11 +5,7 @@ const doneBtn = document.querySelector('.doneBtn');
 const resetBtn = document.querySelector('.resetBtn');
 const graph = document.querySelector('.graph');
 let state = 'html';
-let data = [
-    {label: 'category1', value: 50, color: '#f00'},
-    {label: 'category2', value: 100, color: '#0f0'},
-    {label: 'category3', value: 75, color: '#00f'},
-];
+let data = [];
 const getMaxValue = () => {
     let maxValue = -Infinity;
     for (const {value} of data) {
@@ -287,12 +283,26 @@ const renderPolarAreaGraph = (canvasId, data) => {
     const centerY = canvasHeight / 2;
     const radius = Math.min(centerX, centerY) - 10;
     const total = data.reduce((sum, {value}) => sum + value, 0);
+    const maxValue = Math.ceil(getMaxValue() / 10) * 10;
+    const gapCount = 10;
+    const gapLimit = maxValue / gapCount;
     let startAngle = (Math.PI / 180.0) * 270;
+
+    for(let gap = 1; gap <= gapCount; gap++) {
+        ctx.globalAlpha = .5;
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius / gapCount * gap, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+        ctx.textAlign = 'center';
+        ctx.font = '16px sans-serif';
+        ctx.fillText(Math.round(gapLimit * gap), centerX, centerY - radius / gapCount * gap + 16);
+    }
 
     data.forEach(point => {
         const {label, value, color} = point;
         const sliceAngle = (2 * Math.PI * (total / data.length)) / total;
-        const polarArea = (radius / 2) / value * 100
+        const polarArea = radius / gapCount * value / gapLimit;
         ctx.beginPath();
         ctx.fillStyle = color;
         ctx.globalAlpha = 0.5;
@@ -305,17 +315,12 @@ const renderPolarAreaGraph = (canvasId, data) => {
         const labelY = centerY + (radius / 2) * Math.sin(startAngle + sliceAngle / 2);
         ctx.fillStyle = '#000';
         ctx.font = '16px sans-serif';
+        ctx.textAlign = 'left';
         ctx.globalAlpha = 1;
         ctx.fillText(label, labelX - 20, labelY);
 
         startAngle += sliceAngle;
     });
-
-    const maxValue = Math.ceil(getMaxValue() / 10) * 10;
-    const gapCount = maxValue / 10;
-    for(let gap = 1; gap <= gapCount; gap++) {
-        console.log(gap);
-    }
 }
 const render = () => {
     renderBarGraph('bar', data);
